@@ -1,0 +1,35 @@
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2, h3, h4 {
+  margin-bottom: 10px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-right: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.actions button {
+  margin-left: 6px;
+}
