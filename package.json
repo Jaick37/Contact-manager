@@ -1,0 +1,16 @@
+{
+  "name": "contact-manager",
+  "version": "1.0.0",
+  "description": "A simple and secure full-stack contact management application built as part of a technical evaluation task.  \r The app allows users to sign up, log in, and manage their personal contacts with full CRUD functionality.",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm start --prefix backend\" \"npm run dev --prefix frontend\""
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

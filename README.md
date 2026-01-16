@@ -4,6 +4,9 @@ A simple and secure full-stack contact management application built as part of a
 The app allows users to sign up, log in, and manage their personal contacts with full CRUD functionality.
 
 ---
+For convenience during development, a single command is provided to run both the frontend and backend services together.
+```bash
+npm start
 
 ## 🛠️ Tech Stack
 

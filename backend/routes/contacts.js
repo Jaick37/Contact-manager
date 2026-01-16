@@ -51,6 +51,7 @@ router.get("/", verifyJWT, async (req, res) => {
     .from("contacts")
     .select("*")
     .eq("user_id", req.user.id)
+    .ilike("name", `%${search || ""}%`)
     .order("name", { ascending: true });
 
   if (search) {
