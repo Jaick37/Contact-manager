@@ -49,6 +49,13 @@ export default function Signup() {
       <button type="submit" className="auth-button">
   Sign Up
 </button>
+<p style={{ marginTop: "12px" }}>
+  Already have an account?{" "}
+  <a href="/login" style={{ color: "#2563eb" }}>
+    Login
+  </a>
+</p>
+
 
     </form>
   );
