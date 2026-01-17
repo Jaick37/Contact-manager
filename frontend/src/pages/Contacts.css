@@ -22,13 +22,28 @@ button {
   cursor: pointer;
 }
 
-.contact-item {
+.contact {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
-  border-bottom: 1px solid #ddd;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+
+  text-align: left;   /* ✅ IMPORTANT */
 }
+
+.contact > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* ✅ FORCE LEFT */
+}
+.subtext {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+
 
 .actions button {
   margin-left: 6px;

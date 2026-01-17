@@ -115,11 +115,13 @@ const handleLogout = async () => {
  return (
   <div className="app-container">
     <div className="header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-  <div>
-    <h2>Contact Manager</h2>
-    <p className="subtext">Logged in as {user?.email}</p>
-    <p>Total contacts: {contacts.length}</p>
-  </div>
+ <div style={{ textAlign: "center", flex: 1 }}>
+  <h2>Contact Manager</h2>
+  <p className="subtext">Logged in as {user?.email}</p>
+  <p>Total contacts: {contacts.length}</p>
+</div>
+
+
 
   <button className="link" onClick={handleLogout}>
     Logout

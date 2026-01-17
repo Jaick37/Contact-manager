@@ -25,38 +25,39 @@ export default function Signup() {
     navigate("/contacts");
   };
 
-  return (
-    <form onSubmit={handleSignup}>
-      <h2>Signup</h2>
+ return (
+  <div className="auth-container">
+    <div className="auth-box">
+      <h2>Sign Up</h2>
 
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
+      <form onSubmit={handleSignup}>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-        minLength={6}
-      />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-      <button type="submit" className="auth-button">
-  Sign Up
-</button>
-<p style={{ marginTop: "12px" }}>
-  Already have an account?{" "}
-  <a href="/login" style={{ color: "#2563eb" }}>
-    Login
-  </a>
-</p>
+        <button type="submit" className="auth-button">
+          Sign Up
+        </button>
+      </form>
 
+      <p style={{ marginTop: "12px", textAlign: "center" }}>
+        Already have an account?{" "}
+        <a href="/login" style={{ color: "#2563eb" }}>
+          Login
+        </a>
+      </p>
+    </div>
+  </div>
+);
 
-    </form>
-  );
 }

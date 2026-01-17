@@ -15,22 +15,39 @@ export default function Login() {
     else navigate("/contacts");
   };
 
-  return (
-    <form onSubmit={handleLogin}>
+ return (
+  <div className="auth-container">
+    <div className="auth-box">
       <h2>Login</h2>
-      <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
-      <button type="submit" className="auth-button">
-  Login
-</button>
-<p style={{ marginTop: "12px" }}>
-  Don’t have an account?{" "}
-  <a href="/signup" style={{ color: "#2563eb" }}>
-    Sign up
-  </a>
-</p>
 
+      <form onSubmit={handleLogin}>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
-    </form>
-  );
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+
+        <button type="submit" className="auth-button">
+          Login
+        </button>
+      </form>
+
+      <p style={{ marginTop: "12px", textAlign: "center" }}>
+        Don’t have an account?{" "}
+        <a href="/signup" style={{ color: "#2563eb" }}>
+          Sign up
+        </a>
+      </p>
+    </div>
+  </div>
+);
+
 }
