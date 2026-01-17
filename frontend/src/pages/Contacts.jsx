@@ -29,7 +29,10 @@ export default function Contacts() {
 
   setContacts(res.data);
 };
-
+const handleLogout = async () => {
+  await supabase.auth.signOut();
+  navigate("/login");
+};
 
   useEffect(() => {
     const init = async () => {
@@ -111,11 +114,18 @@ export default function Contacts() {
 
  return (
   <div className="app-container">
-    <div className="header">
-      <h2>Contact Manager</h2>
-      <p className="subtext">Logged in as {user?.email}</p>
-      <p>Total contacts: {contacts.length}</p>
-    </div>
+    <div className="header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+  <div>
+    <h2>Contact Manager</h2>
+    <p className="subtext">Logged in as {user?.email}</p>
+    <p>Total contacts: {contacts.length}</p>
+  </div>
+
+  <button className="link" onClick={handleLogout}>
+    Logout
+  </button>
+</div>
+
 
     <div className="row">
       <input
