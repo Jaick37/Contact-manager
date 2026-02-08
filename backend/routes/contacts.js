@@ -9,7 +9,7 @@ const router = express.Router();
  * Create a contact
  */
 router.post("/", verifyJWT, async (req, res) => {
-  const { name, phone, email, tag } = req.body;
+  const { name, phone, email,age, tag, } = req.body;
 
   if (!name || name.length < 2) {
     return res.status(400).json({ message: "Name must be at least 2 characters" });

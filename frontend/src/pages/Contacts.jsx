@@ -89,6 +89,7 @@ const handleLogout = async () => {
   setName("");
   setPhone("");
   setEmail("");
+  setAge("")
   setTag("");
   setEditingId(null);
 
